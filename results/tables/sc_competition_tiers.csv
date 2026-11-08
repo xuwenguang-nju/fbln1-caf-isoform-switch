@@ -1,0 +1,9 @@
+﻿tier,definition,hits,source,closest_prior_art_or_note,trend_2026
+T1,single-cell + alternative splicing (any disease),439,PubMed TIAB,field exists and is growing ~2x/yr,
+T2,... restricted to cancer,117,PubMed TIAB,glioma atlas (Genome Biol 2025) is the closest template,
+T3,... in the tumour microenvironment,85,PubMed TIAB,NAR 2025 ICB splicing map; HCC T-cell splicing (Cancer Sci 2026),
+T4,... isoform switch / usage at single-cell level,56,PubMed TIAB,"tool-driven, few tumour applications",
+T5,... in oral / head-and-neck tissue,12,PubMed TIAB,HPV-integration splicing (CCR 2026); no cell-type splicing map,
+T6,oral/HNSCC single-cell + alternative splicing (title/abstract),1,Europe PMC TITLE_ABS,one 2026 Sci Bull review-style omics portrait; no atlas,
+T7,"CAF + alternative splicing / isoform (any cancer, all designs)",4,Europe PMC TITLE_ABS,FGFR2c-CAF (Biology 2023) is the only mechanistic isoform paper,
+T8,macrophage + splicing / isoform + tumour,54,Europe PMC TITLE_ABS,"MS4A7, CD47, neuropilin isoforms already published",

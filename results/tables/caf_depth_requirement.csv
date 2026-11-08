@@ -1,0 +1,5 @@
+﻿target_replicate_sd,reads_per_gene_needed,reads_per_library_needed_median_gene,note
+0.05,48,1459790,"per library; the median gene needs this, low-expressed genes more"
+0.04,69,2084184,"per library; the median gene needs this, low-expressed genes more"
+0.03,109,3298445,"per library; the median gene needs this, low-expressed genes more"
+0.02,208,6299554,"per library; the median gene needs this, low-expressed genes more"

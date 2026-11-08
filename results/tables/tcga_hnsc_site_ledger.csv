@@ -1,0 +1,6 @@
+group,n_cases,n_with_os,n_events,median_os_or_fu_days,n_with_stage
+oral_strict,246,211,103,625.0,228
+oral_ambig_lip_oral_pharynx,70,68,42,876.0,66
+oral_wide,316,279,145,639.0,294
+oropharynx_HPV_related,77,56,21,553.0,43
+larynx,118,99,52,675.0,101

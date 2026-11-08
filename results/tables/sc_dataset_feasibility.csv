@@ -1,0 +1,14 @@
+﻿accession,study,scope,n,chemistry,access,splice_fit,role
+GSE103322,Puram 2017 Cell,"OSCC primary + matched lymph-node metastasis, 18 patients",5901 cells,"Smart-seq2, full-length (verified in paper methods)",GEO open,"HIGH: full-length, median 1.34M reads/cell",primary discovery set for CAF / macrophage / malignant states
+HRA001006,JCI 2022 (TDO2+ myofibroblasts),13 OSCC + 3 oral leukoplakia + 8 adjacent normal,131702 cells,10x 3' (14 samples) + 10x 5' with TCR (10 samples),"GSA-Human, controlled access",MEDIUM: droplet; 5' subset suits 5'-aware callers; only 3 OLK,"premalignant→cancer axis, CAF-myeloid crosstalk"
+GSE181919,Nat Commun 2023,normal → leukoplakia → primary HNSCC → metastasis,37 samples,droplet scRNA-seq (per study),GEO open,MEDIUM-LOW: droplet,premalignant axis; bulk-style pseudobulk splicing only
+GSE195832,Clin Cancer Res 2022,"HNSCC CAF subsets, neoadjuvant ICB (pre/post)",86 samples,droplet scRNA-seq (per study),GEO open,MEDIUM-LOW: droplet,CAF phenotype ↔ ICB response mapping
+GSE200996,2022 (tissue-resident memory T cells),"oral cancer, pre-surgical ICB",204 samples,mixed platforms (GPL18573/20795/20301),GEO open,MEDIUM: mixed,"ICB context, T-cell states"
+GSE301741,Cell Rep Med 2026,"16 HNSCC, pre/post neoadjuvant pembrolizumab",58 samples,droplet scRNA-seq (per study),GEO open,LOW-MEDIUM,treatment-response context
+GSE310797,Nat Commun 2026,OSCC stage series + spatial (MDSC/ANXA1-FPRs),19 samples,single-cell + spatial,GEO open,LOW-MEDIUM,competitor paper; spatial validation route
+GSE117872,2018,OSCC cell lines: cisplatin sensitive/resistant/holiday,1431 cells,droplet scRNA-seq (per study),GEO open,LOW-MEDIUM,drug-resistance hypothesis testing
+TCGA-HNSC,TCGA,bulk RNA-seq HNSCC (with clinical + survival),~500 tumours,bulk RNA-seq,GDC / OncoSplicing 3.0 PSI,HIGH for bulk PSI (precomputed),cell-type events → bulk PSI → survival
+GSE270047,2024 (OncoPrism-HNSCC),HNSCC ICB-treated bulk cohort,434 samples,bulk RNA-seq,GEO open,HIGH for bulk PSI,splicing signature ↔ ICB response
+GSE288199,2025,neoadjuvant immunotherapy CD8 dynamics (bulk),180 samples,bulk RNA-seq,GEO open,HIGH for bulk PSI,independent ICB validation
+GSE41613 / GSE42743,2012-2013,OSCC cohorts with survival,97 / 103 samples,microarray,GEO open,NOT USABLE for PSI (array),gene-level only; not a splicing validation set
+GSE319719,2026,oral submucous fibrosis and malignant transformation,13 samples,bulk RNA-seq,GEO open,MEDIUM (small n),OSF fibrosis axis

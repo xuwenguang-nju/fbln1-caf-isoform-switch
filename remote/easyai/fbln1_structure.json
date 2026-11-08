@@ -1,0 +1,551 @@
+{
+ "uniprot": {
+  "accession": "P23142",
+  "length": 703,
+  "features": [
+   {
+    "type": "Signal",
+    "start": 1,
+    "end": 29,
+    "desc": ""
+   },
+   {
+    "type": "Chain",
+    "start": 30,
+    "end": 703,
+    "desc": "Fibulin-1"
+   },
+   {
+    "type": "Domain",
+    "start": 36,
+    "end": 76,
+    "desc": "Anaphylatoxin-like 1"
+   },
+   {
+    "type": "Domain",
+    "start": 77,
+    "end": 111,
+    "desc": "Anaphylatoxin-like 2"
+   },
+   {
+    "type": "Domain",
+    "start": 112,
+    "end": 144,
+    "desc": "Anaphylatoxin-like 3"
+   },
+   {
+    "type": "Domain",
+    "start": 176,
+    "end": 215,
+    "desc": "EGF-like 1"
+   },
+   {
+    "type": "Domain",
+    "start": 216,
+    "end": 261,
+    "desc": "EGF-like 2; calcium-binding"
+   },
+   {
+    "type": "Domain",
+    "start": 262,
+    "end": 307,
+    "desc": "EGF-like 3; calcium-binding"
+   },
+   {
+    "type": "Domain",
+    "start": 308,
+    "end": 355,
+    "desc": "EGF-like 4; calcium-binding"
+   },
+   {
+    "type": "Domain",
+    "start": 356,
+    "end": 398,
+    "desc": "EGF-like 5; calcium-binding"
+   },
+   {
+    "type": "Domain",
+    "start": 399,
+    "end": 440,
+    "desc": "EGF-like 6; calcium-binding"
+   },
+   {
+    "type": "Domain",
+    "start": 441,
+    "end": 480,
+    "desc": "EGF-like 7; calcium-binding"
+   },
+   {
+    "type": "Domain",
+    "start": 481,
+    "end": 524,
+    "desc": "EGF-like 8; calcium-binding"
+   },
+   {
+    "type": "Domain",
+    "start": 525,
+    "end": 578,
+    "desc": "EGF-like 9; calcium-binding"
+   },
+   {
+    "type": "Region",
+    "start": 356,
+    "end": 440,
+    "desc": "Self-association and FN1-binding; calcium is necessary for homotypic binding, but not for heterotypic binding"
+   },
+   {
+    "type": "Glycosylation",
+    "start": 98,
+    "end": 98,
+    "desc": "N-linked (GlcNAc...) (complex) asparagine"
+   },
+   {
+    "type": "Glycosylation",
+    "start": 535,
+    "end": 535,
+    "desc": "N-linked (GlcNAc...) asparagine"
+   },
+   {
+    "type": "Glycosylation",
+    "start": 539,
+    "end": 539,
+    "desc": "N-linked (GlcNAc...) asparagine"
+   },
+   {
+    "type": "Disulfide bond",
+    "start": 36,
+    "end": 61,
+    "desc": ""
+   },
+   {
+    "type": "Disulfide bond",
+    "start": 37,
+    "end": 68,
+    "desc": ""
+   },
+   {
+    "type": "Disulfide bond",
+    "start": 50,
+    "end": 69,
+    "desc": ""
+   },
+   {
+    "type": "Disulfide bond",
+    "start": 78,
+    "end": 109,
+    "desc": ""
+   },
+   {
+    "type": "Disulfide bond",
+    "start": 91,
+    "end": 110,
+    "desc": ""
+   },
+   {
+    "type": "Disulfide bond",
+    "start": 112,
+    "end": 136,
+    "desc": ""
+   },
+   {
+    "type": "Disulfide bond",
+    "start": 113,
+    "end": 143,
+    "desc": ""
+   },
+   {
+    "type": "Disulfide bond",
+    "start": 126,
+    "end": 144,
+    "desc": ""
+   },
+   {
+    "type": "Disulfide bond",
+    "start": 180,
+    "end": 190,
+    "desc": ""
+   },
+   {
+    "type": "Disulfide bond",
+    "start": 186,
+    "end": 199,
+    "desc": ""
+   },
+   {
+    "type": "Disulfide bond",
+    "start": 201,
+    "end": 214,
+    "desc": ""
+   },
+   {
+    "type": "Disulfide bond",
+    "start": 220,
+    "end": 233,
+    "desc": ""
+   },
+   {
+    "type": "Disulfide bond",
+    "start": 227,
+    "end": 242,
+    "desc": ""
+   },
+   {
+    "type": "Disulfide bond",
+    "start": 248,
+    "end": 260,
+    "desc": ""
+   },
+   {
+    "type": "Disulfide bond",
+    "start": 266,
+    "end": 279,
+    "desc": ""
+   },
+   {
+    "type": "Disulfide bond",
+    "start": 273,
+    "end": 288,
+    "desc": ""
+   },
+   {
+    "type": "Disulfide bond",
+    "start": 294,
+    "end": 306,
+    "desc": ""
+   },
+   {
+    "type": "Disulfide bond",
+    "start": 312,
+    "end": 325,
+    "desc": ""
+   },
+   {
+    "type": "Disulfide bond",
+    "start": 319,
+    "end": 334,
+    "desc": ""
+   },
+   {
+    "type": "Disulfide bond",
+    "start": 341,
+    "end": 354,
+    "desc": ""
+   },
+   {
+    "type": "Disulfide bond",
+    "start": 360,
+    "end": 373,
+    "desc": ""
+   },
+   {
+    "type": "Disulfide bond",
+    "start": 367,
+    "end": 382,
+    "desc": ""
+   },
+   {
+    "type": "Disulfide bond",
+    "start": 384,
+    "end": 397,
+    "desc": ""
+   },
+   {
+    "type": "Disulfide bond",
+    "start": 403,
+    "end": 415,
+    "desc": ""
+   },
+   {
+    "type": "Disulfide bond",
+    "start": 411,
+    "end": 424,
+    "desc": ""
+   },
+   {
+    "type": "Disulfide bond",
+    "start": 426,
+    "end": 439,
+    "desc": ""
+   },
+   {
+    "type": "Disulfide bond",
+    "start": 445,
+    "end": 454,
+    "desc": ""
+   },
+   {
+    "type": "Disulfide bond",
+    "start": 450,
+    "end": 463,
+    "desc": ""
+   },
+   {
+    "type": "Disulfide bond",
+    "start": 465,
+    "end": 479,
+    "desc": ""
+   },
+   {
+    "type": "Disulfide bond",
+    "start": 485,
+    "end": 498,
+    "desc": ""
+   },
+   {
+    "type": "Disulfide bond",
+    "start": 494,
+    "end": 507,
+    "desc": ""
+   },
+   {
+    "type": "Disulfide bond",
+    "start": 509,
+    "end": 523,
+    "desc": ""
+   },
+   {
+    "type": "Disulfide bond",
+    "start": 529,
+    "end": 542,
+    "desc": ""
+   },
+   {
+    "type": "Disulfide bond",
+    "start": 536,
+    "end": 551,
+    "desc": ""
+   },
+   {
+    "type": "Disulfide bond",
+    "start": 556,
+    "end": 577,
+    "desc": ""
+   },
+   {
+    "type": "Alternative sequence",
+    "start": 567,
+    "end": 703,
+    "desc": "in isoform A"
+   },
+   {
+    "type": "Alternative sequence",
+    "start": 567,
+    "end": 703,
+    "desc": "in isoform B"
+   },
+   {
+    "type": "Alternative sequence",
+    "start": 567,
+    "end": 703,
+    "desc": "in isoform C"
+   },
+   {
+    "type": "Natural variant",
+    "start": 141,
+    "end": 141,
+    "desc": "in dbSNP:rs136730"
+   },
+   {
+    "type": "Natural variant",
+    "start": 397,
+    "end": 397,
+    "desc": "found in a family with syndactyly, undescended testes, delayed motor milestones, intellectual disability and signs of brain atrophy; uncertain significance; dbSNP:rs397509432"
+   },
+   {
+    "type": "Natural variant",
+    "start": 509,
+    "end": 509,
+    "desc": "in dbSNP:rs1802787"
+   },
+   {
+    "type": "Natural variant",
+    "start": 695,
+    "end": 695,
+    "desc": "in dbSNP:rs13268"
+   },
+   {
+    "type": "Sequence conflict",
+    "start": 13,
+    "end": 13,
+    "desc": "in Ref. 6; AAH22497"
+   },
+   {
+    "type": "Sequence conflict",
+    "start": 36,
+    "end": 36,
+    "desc": "in Ref. 8; AA sequence"
+   },
+   {
+    "type": "Sequence conflict",
+    "start": 41,
+    "end": 42,
+    "desc": "in Ref. 8; AA sequence"
+   },
+   {
+    "type": "Sequence conflict",
+    "start": 521,
+    "end": 521,
+    "desc": "in Ref. 6; AAH22497"
+   },
+   {
+    "type": "Sequence conflict",
+    "start": 548,
+    "end": 548,
+    "desc": "in Ref. 1; CAA37770/CAA37771/CAA37772, 2; AAB17099 and 3; AAK37822"
+   },
+   {
+    "type": "Sequence conflict",
+    "start": 650,
+    "end": 650,
+    "desc": "in Ref. 4; AAG17241"
+   },
+   {
+    "type": "Sequence conflict",
+    "start": 662,
+    "end": 662,
+    "desc": "in Ref. 4; AAG17241"
+   },
+   {
+    "type": "Sequence conflict",
+    "start": 680,
+    "end": 682,
+    "desc": "in Ref. 4; AAG17241"
+   }
+  ]
+ },
+ "isoforms": {
+  "FBLN1-202": {
+   "enst": "ENST00000327858",
+   "nt": 2904,
+   "aa": 703,
+   "frame": 1,
+   "pfam_kept": [
+    "PF01821 36-69",
+    "PF01821 112-144",
+    "PF07645 216-260",
+    "PF07645 262-303",
+    "PF07645 308-354",
+    "PF07645 356-391",
+    "PF12662 421-444",
+    "PF12662 460-484",
+    "PF12662 504-528",
+    "PF22914 594-700"
+   ],
+   "pfam_absent": []
+  },
+  "FBLN1-201": {
+   "enst": "ENST00000262722",
+   "nt": 2251,
+   "aa": 683,
+   "frame": 1,
+   "pfam_kept": [
+    "PF01821 36-69",
+    "PF01821 112-144",
+    "PF07645 216-260",
+    "PF07645 262-303",
+    "PF07645 308-354",
+    "PF07645 356-391",
+    "PF12662 421-444",
+    "PF12662 460-484",
+    "PF12662 504-528"
+   ],
+   "pfam_absent": [
+    "PF22914 594-700"
+   ]
+  }
+ },
+ "divergence": {
+  "first_differing_residue_1based": 567,
+  "shared_prefix": 566,
+  "egf9": {
+   "start": 525,
+   "end": 578,
+   "inside": true,
+   "position_from_egf9_start": 42,
+   "egf9_residues_kept_by_both": 42,
+   "egf9_total": 54
+  }
+ },
+ "identity": {
+  "d_matches_uniprot": true,
+  "d_vs_uniprot_mismatches": 0
+ },
+ "pfam_interpro": [
+  {
+   "pfam": "PF01821",
+   "name": "Anaphylotoxin-like domain",
+   "start": 36,
+   "end": 69
+  },
+  {
+   "pfam": "PF01821",
+   "name": "Anaphylotoxin-like domain",
+   "start": 112,
+   "end": 144
+  },
+  {
+   "pfam": "PF07645",
+   "name": "Calcium-binding EGF domain",
+   "start": 216,
+   "end": 260
+  },
+  {
+   "pfam": "PF07645",
+   "name": "Calcium-binding EGF domain",
+   "start": 262,
+   "end": 303
+  },
+  {
+   "pfam": "PF07645",
+   "name": "Calcium-binding EGF domain",
+   "start": 308,
+   "end": 354
+  },
+  {
+   "pfam": "PF07645",
+   "name": "Calcium-binding EGF domain",
+   "start": 356,
+   "end": 391
+  },
+  {
+   "pfam": "PF12662",
+   "name": "Complement Clr-like EGF-like",
+   "start": 421,
+   "end": 444
+  },
+  {
+   "pfam": "PF12662",
+   "name": "Complement Clr-like EGF-like",
+   "start": 460,
+   "end": 484
+  },
+  {
+   "pfam": "PF12662",
+   "name": "Complement Clr-like EGF-like",
+   "start": 504,
+   "end": 528
+  },
+  {
+   "pfam": "PF22914",
+   "name": "Fibulin C-terminal Ig-like domain",
+   "start": 594,
+   "end": 700
+  }
+ ],
+ "c_terminal_domain": {
+  "pfam": "PF22914",
+  "name": "Fibulin C-terminal Ig-like domain",
+  "start": 594,
+  "end": 700,
+  "in_1D": true,
+  "length": 107,
+  "alt_segment_1D": [
+   567,
+   703
+  ],
+  "alt_segment_1C": [
+   567,
+   683
+  ]
+ }
+}

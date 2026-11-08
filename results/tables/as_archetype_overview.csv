@@ -1,0 +1,15 @@
+﻿archetype,pubmed_hits_2026_02,sampled_records,median_citations_sample,max_citations_sample,median_year_sample,query
+immune_microenvironment,1758,120,15.0,731.0,2022.0,"alternative splicing[TIAB] AND (immune[TIAB] OR ""tumor microenvironment""[TIAB])"
+database_tool,1142,120,13.0,4991.0,2021.0,alternative splicing[TIAB] AND (database[TIAB] OR web server[TIAB] OR webserver[TIAB] OR pipeline[TIAB])
+isoform_switch,810,120,14.5,15529.0,2023.0,"(""isoform switch""[TIAB] OR ""isoform switching""[TIAB] OR ""differential isoform""[TIAB])"
+splicing_factor,642,120,12.0,651.0,2022.0,"(""splicing factor""[TIAB] OR spliceosome[TIAB]) AND (bioinformatic*[TIAB] OR computational[TIAB] OR ""in silico""[TIAB])"
+TCGA_pancancer,536,120,9.0,899.0,2021.0,"alternative splicing[TIAB] AND (TCGA[TIAB] OR ""The Cancer Genome Atlas""[TIAB])"
+prognostic_signature,463,120,8.5,719.0,2022.0,alternative splicing[TIAB] AND (prognostic[TIAB] OR prognosis[TIAB]) AND (signature[TIAB] OR model[TIAB] OR risk[TIAB])
+singlecell,431,120,16.0,923.0,2024.0,"alternative splicing[TIAB] AND (""single-cell""[TIAB] OR ""single cell""[TIAB] OR scRNA-seq[TIAB])"
+hallmark_hype,324,120,23.0,4860.0,2023.0,"alternative splicing[TIAB] AND (ferroptosis[TIAB] OR cuproptosis[TIAB] OR lactylation[TIAB] OR m6A[TIAB] OR ""N6-methyladenosine""[TIAB])"
+sQTL,289,120,13.0,899.0,2023.0,"(""splicing quantitative trait""[TIAB] OR sQTL[TIAB] OR ""splicing QTL""[TIAB])"
+drug_resistance,258,120,18.0,326.0,2022.0,alternative splicing[TIAB] AND (drug resistance[TIAB] OR chemoresistance[TIAB])
+gwas_risk,241,120,10.0,517.0,2023.0,"alternative splicing[TIAB] AND (GWAS[TIAB] OR ""genome-wide association""[TIAB])"
+machine_learning,208,120,9.5,459.0,2022.0,"alternative splicing[TIAB] AND (""machine learning""[TIAB] OR ""deep learning""[TIAB] OR random forest[TIAB])"
+neoantigen,83,83,8.5,899.0,2024.0,"alternative splicing[TIAB] AND (neoantigen*[TIAB] OR ""tumor-specific antigen""[TIAB])"
+mendelian_randomization,20,20,4.0,69.0,2024.0,"alternative splicing[TIAB] AND (""Mendelian randomization""[TIAB] OR ""Mendelian randomisation""[TIAB])"

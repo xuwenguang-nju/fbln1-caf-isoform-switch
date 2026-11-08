@@ -1,0 +1,13 @@
+strategy,assumption,psi_sd,events_tested,rho,min_detectable_psi_delta,standardized_d
+"per-event, alpha=0.05",PSI SD=0.1,0.1,1,,0.118,1.18
+"per-event, Bonferroni m=1000",PSI SD=0.1,0.1,1000,,0.229,2.29
+"set-level (m=100, rho=0.2)",PSI SD=0.1,0.1,100,0.2,0.054,0.54
+"set-level (m=100, rho=0.6)",PSI SD=0.1,0.1,100,0.6,0.092,0.92
+"per-event, alpha=0.05",PSI SD=0.15,0.15,1,,0.177,1.18
+"per-event, Bonferroni m=1000",PSI SD=0.15,0.15,1000,,0.344,2.29
+"set-level (m=100, rho=0.2)",PSI SD=0.15,0.15,100,0.2,0.081,0.54
+"set-level (m=100, rho=0.6)",PSI SD=0.15,0.15,100,0.6,0.137,0.92
+"per-event, alpha=0.05",PSI SD=0.2,0.2,1,,0.236,1.18
+"per-event, Bonferroni m=1000",PSI SD=0.2,0.2,1000,,0.459,2.29
+"set-level (m=100, rho=0.2)",PSI SD=0.2,0.2,100,0.2,0.107,0.54
+"set-level (m=100, rho=0.6)",PSI SD=0.2,0.2,100,0.6,0.183,0.92

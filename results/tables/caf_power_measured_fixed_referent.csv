@@ -1,0 +1,7 @@
+﻿sd_source,sd,alpha,min_detectable_dIF_80pct_power_n6,n_needed_for_dIF_0.10
+measured_median_dIF_SD,0.089,0.05,0.125,9
+measured_median_dIF_SD,0.089,0.01,0.185,13
+measured_p75_dIF_SD,0.153,0.05,0.219,20
+measured_p75_dIF_SD,0.153,0.01,0.321,31
+scenario_previous_assumption,0.1,0.05,0.141,10
+scenario_previous_assumption,0.1,0.01,0.211,15

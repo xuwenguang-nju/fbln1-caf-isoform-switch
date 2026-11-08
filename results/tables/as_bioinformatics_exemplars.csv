@@ -1,0 +1,46 @@
+﻿archetype,role,doi,cr_year,cr_journal,cr_title,cr_cited,oa_cited,oa_retracted,cr_type
+A_pan-cancer_atlas,landmark,10.1016/j.ccell.2018.07.001,2018,Cancer Cell,"Comprehensive Analysis of Alternative Splicing Across Tumors from 8,705 Patients",870,899,False,journal-article
+A_pan-cancer_atlas,landmark,10.1016/j.celrep.2017.08.012,2017,Cell Reports,The Functional Impact of Alternative Splicing in Cancer,505,553,False,journal-article
+A_pan-cancer_atlas,template,10.1186/s12864-018-4775-x,2018,BMC Genomics,TSVdb: a web-tool for TCGA splicing variants analysis,94,104,False,journal-article
+A_pan-cancer_atlas,template,10.1038/ncomms11548,2016,Nature Communications,SURVIV for survival analysis of mRNA isoform variation,76,86,False,journal-article
+A_database,landmark,10.1093/nar/gkac955,2023,Nucleic Acids Research,ASCancer Atlas: a comprehensive knowledgebase of alternative splicing in human cancers,44,41,False,journal-article
+A_database,landmark,10.1093/nar/gkae1098,2025,Nucleic Acids Research,OncoSplicing 3.0: an updated database for identifying RBPs regulating alternative splicing events in cancers,20,17,False,journal-article
+A_database,landmark,10.1093/nar/gkab851,2022,Nucleic Acids Research,OncoSplicing: an updated database for clinically relevant alternative splicing in 33 human cancers,86,86,False,journal-article
+B_tool_event,landmark,10.1073/pnas.1419161111,2014,Proceedings of the National Academy of Sciences,rMATS: Robust and flexible detection of differential alternative splicing from replicate RNA-Seq data,2665,2699,False,journal-article
+B_tool_event,landmark,10.1186/s13059-018-1417-1,2018,Genome Biology,"SUPPA2: fast, accurate, and uncertainty-aware differential splicing analysis across multiple conditions",717,706,False,journal-article
+B_tool_event,landmark,10.1038/s41588-017-0004-9,2018,Nature Genetics,Annotation-free quantification of RNA splicing using LeafCutter,798,760,False,journal-article
+B_tool_event,landmark,10.1016/j.molcel.2018.08.018,2018,Molecular Cell,Efficient and Accurate Quantitative Profiling of Alternative Splicing Patterns of Any Complexity on a Laptop,198,214,False,journal-article
+B_tool_event,landmark,10.1186/s13059-017-1184-4,2017,Genome Biology,IRFinder: assessing the impact of intron retention on mammalian gene expression,318,302,False,journal-article
+B_tool_event,landmark,10.1093/bioinformatics/btw076,2016,Bioinformatics,"<i>SplAdder</i> : identification, quantification and testing of alternative splicing events from RNA-Seq data",181,168,False,journal-article
+B_tool_isoform,landmark,10.1093/bioinformatics/btz247,2019,Bioinformatics,IsoformSwitchAnalyzeR: analysis of changes in genome-wide patterns of alternative splicing and its functional consequences,380,342,False,journal-article
+B_tool_isoform,landmark,10.1158/1541-7786.mcr-16-0459,2017,Molecular Cancer Research,The Landscape of Isoform Switches in Human Cancers,265,257,False,journal-article
+B_tool_prediction,landmark,10.1016/j.cell.2018.12.015,2019,Cell,Predicting Splicing from Primary Sequence with Deep Learning,2979,2817,False,journal-article
+B_tool_prediction,landmark,10.1186/s13059-019-1653-z,2019,Genome Biology,MMSplice: modular modeling improves the predictions of genetic variant effects on splicing,231,234,False,journal-article
+C_single-cell,landmark,10.1186/s13059-018-1496-z,2018,Genome Biology,Single-cell RNAseq for the study of isoforms—how is that possible?,141,140,False,journal-article
+C_single-cell,landmark,10.1371/journal.pcbi.1007925,2020,PLOS Computational Biology,Detecting differential alternative splicing events in scRNA-seq with or without Unique Molecular Identifiers,28,28,False,journal-article
+C_single-cell,landmark,10.1093/nar/gkac1260,2023,Nucleic Acids Research,MARVEL: an integrated alternative splicing analysis platform for single-cell RNA sequencing data,44,43,False,journal-article
+C_single-cell,landmark,10.1101/gr.276109.121,2022,Genome Research,Identifying cell state–associated alternative splicing events and their coregulation,18,21,False,journal-article
+C_single-cell,template,10.1186/s13059-025-03889-9,2025,Genome Biology,A single-cell atlas of RNA alternative splicing in the glioma-immune ecosystem,6,7,False,journal-article
+D_prognostic_signature,template,10.1016/j.canlet.2017.02.016,2017,Cancer Letters,Prognostic alternative mRNA splicing signature in non-small cell lung cancer,166,198,False,journal-article
+D_prognostic_signature,template,10.1002/cam4.3530,2020,Cancer Medicine,Development of a nomogram for prognostic prediction of lower‐grade glioma based on alternative splicing signatures,5,5,False,journal-article
+D_prognostic_signature,template,10.1155/2022/4552445,2022,Journal of Oncology,A Novel Nomogram Combining Alternative Splicing Events and Clinical Factors for Prognosis Prediction in Head and Neck Squamous Cell Carcinoma,4,5,False,journal-article
+D_prognostic_signature,template,10.7150/jca.31725,2019,Journal of Cancer,Comprehensive investigation of alternative splicing and development of a prognostic risk score for prostate cancer based on six-gene signatures,8,10,False,journal-article
+D_drug_sensitivity,template,10.21037/atm-21-6422,2022,Annals of Translational Medicine,"Systemic characterization of alternative splicing related to prognosis, immune infiltration, and drug sensitivity analysis in ovarian cancer",2,5,False,journal-article
+E_sQTL,landmark,10.1038/s41467-020-20578-2,2021,Nature Communications,Identification and analysis of splicing quantitative trait loci across multiple tissues in the human genome,161,155,False,journal-article
+E_sQTL,template,10.1038/ncomms14519,2017,Nature Communications,Genome-wide identification of splicing QTLs in the human brain and their enrichment among schizophrenia-associated loci,197,197,False,journal-article
+E_sQTL,template,10.1038/s41467-022-32358-1,2022,Nature Communications,Splicing QTL analysis focusing on coding sequences reveals mechanisms for disease susceptibility loci,51,49,False,journal-article
+E_rare_variant,template,10.1016/j.crmeth.2025.101176,2025,Cell Reports Methods,SpliPath enhances disease gene discovery in case-control analyses of rare splice-altering genetic variants,0,0,False,journal-article
+E_TWAS,template,10.1038/s41467-018-06302-1,2018,Nature Communications,Large-scale transcriptome-wide association study identifies new prostate cancer risk regions,153,150,False,journal-article
+E_MR,template,10.1038/s41467-023-41912-4,2023,Nature Communications,Alternative splicing in lung influences COVID-19 severity and respiratory diseases,36,37,False,journal-article
+E_MR,template,10.1038/s41380-023-02111-1,2023,Molecular Psychiatry,RNA alternative splicing impacts the risk for alcohol use disorder,17,10,False,journal-article
+F_neoantigen,landmark,10.1073/pnas.2221116120,2023,Proceedings of the National Academy of Sciences,IRIS: Discovery of cancer immunotherapy targets arising from pre-mRNA alternative splicing,56,51,False,journal-article
+F_neoantigen,template,10.1158/2767-9764.crc-23-0309,2024,Cancer Research Communications,SpliceMutr Enables Pan-Cancer Analysis of Splicing-Derived Neoantigen Burden in Tumors,11,11,False,journal-article
+F_neoantigen,template,10.1200/cci.21.00124,2022,JCO Clinical Cancer Informatics,Intron-Retention Neoantigen Load Predicts Favorable Prognosis in Pancreatic Cancer,17,16,False,journal-article
+F_neoantigen,template,10.1093/bib/bbab553,2022,Briefings in Bioinformatics,Identification of alternative splicing-derived cancer neoantigens for mRNA vaccine development,25,24,False,journal-article
+F_immunotherapy,template,10.1038/s44318-024-00262-7,2024,The EMBO Journal,Alternative splicing of PBRM1 mediates resistance to PD-1 blockade therapy in renal cancer,18,17,False,journal-article
+F_immunotherapy,template,10.1093/nar/gkaf1171,2025,Nucleic Acids Research,Single-cell mapping of alternative splicing linked to checkpoint immunotherapy response,4,4,False,journal-article
+G_longread_isoform,template,10.1016/j.xgen.2024.100641,2024,Cell Genomics,An isoform-resolution transcriptomic atlas of colorectal cancer from long-read single-cell sequencing,26,23,False,journal-article
+G_longread_isoform,template,10.1126/sciadv.abg6711,2022,Science Advances,A comprehensive long-read isoform analysis platform and sequencing resource for breast cancer,86,74,False,journal-article
+G_molecular_subtype,template,10.1038/s41467-025-56821-x,2025,Nature Communications,Splicing diversity enhances the molecular classification of pituitary neuroendocrine tumors,15,14,False,journal-article
+H_mechanism_landscape,landmark,10.1016/j.celrep.2018.01.088,2018,Cell Reports,Somatic Mutational Landscape of Splicing Factor Genes and Their Functional Consequences across 33 Cancer Types,422,444,False,journal-article
+H_mechanism_landscape,template,10.3390/cancers15235689,2023,Cancers,Pan-Cancer Profiling of Intron Retention and Its Clinical Significance in Diagnosis and Prognosis,6,7,False,journal-article

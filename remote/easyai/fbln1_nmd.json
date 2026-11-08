@@ -1,0 +1,178 @@
+{
+ "rule": "stop codon >50 nt upstream of the last exon-exon junction marks an NMD substrate (50-nt rule)",
+ "source": "/root/as_psi/ref/gencode.v44.annotation.gtf",
+ "transcripts": {
+  "FBLN1-202_1D": {
+   "transcript_id": "ENST00000327858",
+   "chrom": "chr22",
+   "strand": "+",
+   "n_exons": 17,
+   "n_coding_exons": 17,
+   "coding_nt": 2109,
+   "protein_aa_from_cds": 703,
+   "terminal_exon": [
+    45600307,
+    45601135
+   ],
+   "terminal_exon_len": 829,
+   "coding_nt_in_terminal_exon": 137,
+   "stop_codon_start": 45600444,
+   "last_junction": 45600307,
+   "stop_to_last_junction_nt": 137,
+   "utr3_nt_in_terminal_exon": 692,
+   "nmd_substrate_50nt_rule": true,
+   "exons_transcript_order": [
+    [
+     45502883,
+     45503064
+    ],
+    [
+     45518682,
+     45518787
+    ],
+    [
+     45525543,
+     45525678
+    ],
+    [
+     45527847,
+     45528009
+    ],
+    [
+     45531265,
+     45531324
+    ],
+    [
+     45533063,
+     45533164
+    ],
+    [
+     45533761,
+     45533898
+    ],
+    [
+     45535200,
+     45535337
+    ],
+    [
+     45541229,
+     45541372
+    ],
+    [
+     45542155,
+     45542283
+    ],
+    [
+     45543401,
+     45543526
+    ],
+    [
+     45547085,
+     45547204
+    ],
+    [
+     45548613,
+     45548744
+    ],
+    [
+     45550492,
+     45550615
+    ],
+    [
+     45574511,
+     45574653
+    ],
+    [
+     45576977,
+     45577108
+    ],
+    [
+     45600307,
+     45601135
+    ]
+   ]
+  },
+  "FBLN1-201_1C": {
+   "transcript_id": "ENST00000262722",
+   "chrom": "chr22",
+   "strand": "+",
+   "n_exons": 15,
+   "n_coding_exons": 15,
+   "coding_nt": 2049,
+   "protein_aa_from_cds": 683,
+   "terminal_exon": [
+    45562912,
+    45563362
+   ],
+   "terminal_exon_len": 451,
+   "coding_nt_in_terminal_exon": 352,
+   "stop_codon_start": 45563264,
+   "last_junction": 45562912,
+   "stop_to_last_junction_nt": 352,
+   "utr3_nt_in_terminal_exon": 99,
+   "nmd_substrate_50nt_rule": true,
+   "exons_transcript_order": [
+    [
+     45502883,
+     45503064
+    ],
+    [
+     45518682,
+     45518787
+    ],
+    [
+     45525543,
+     45525678
+    ],
+    [
+     45527847,
+     45528009
+    ],
+    [
+     45531265,
+     45531324
+    ],
+    [
+     45533063,
+     45533164
+    ],
+    [
+     45533761,
+     45533898
+    ],
+    [
+     45535200,
+     45535337
+    ],
+    [
+     45541229,
+     45541372
+    ],
+    [
+     45542155,
+     45542283
+    ],
+    [
+     45543401,
+     45543526
+    ],
+    [
+     45547085,
+     45547204
+    ],
+    [
+     45548613,
+     45548744
+    ],
+    [
+     45550492,
+     45550615
+    ],
+    [
+     45562912,
+     45563362
+    ]
+   ]
+  }
+ }
+}

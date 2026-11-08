@@ -1,0 +1,20 @@
+{
+ "CAF_vs_epithelial": {
+  "n": 20724,
+  "all_same_sign": 6232,
+  "exp_allsame": 2590.5,
+  "sign_p": 0.0,
+  "n_p05": 2514,
+  "exp_p05": 1019.8000000000001,
+  "p05_binom_p": 0.0
+ },
+ "CAF_vs_endothelial": {
+  "n": 21809,
+  "all_same_sign": 4163,
+  "exp_allsame": 2726.125,
+  "sign_p": 5.614152684019645e-168,
+  "n_p05": 960,
+  "exp_p05": 1072.8,
+  "p05_binom_p": 0.9998446519966628
+ }
+}

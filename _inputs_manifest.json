@@ -1,0 +1,267 @@
+[
+ {
+  "name": "switch_test_full_fixed_referent.tsv",
+  "release_path": "results/tables/switch_test_full_fixed_referent.tsv",
+  "bytes": 1835288
+ },
+ {
+  "name": "switch_test_sub10_fixed_referent.tsv",
+  "release_path": "results/tables/switch_test_sub10_fixed_referent.tsv",
+  "bytes": 1409552
+ },
+ {
+  "name": "candidates_gated_fixed_referent.tsv",
+  "release_path": "results/tables/candidates_gated_fixed_referent.tsv",
+  "bytes": 1659827
+ },
+ {
+  "name": "isoform_identifiability_genes.tsv",
+  "release_path": "results/tables/isoform_identifiability_genes.tsv",
+  "bytes": 2852093
+ },
+ {
+  "name": "caf_panel_depth_consistency_fixed_referent.csv",
+  "release_path": "results/tables/caf_panel_depth_consistency_fixed_referent.csv",
+  "bytes": 5694
+ },
+ {
+  "name": "caf_switch_threshold_sweep_fixed_referent.csv",
+  "release_path": "results/tables/caf_switch_threshold_sweep_fixed_referent.csv",
+  "bytes": 271
+ },
+ {
+  "name": "caf_isoform_noise_by_depth.csv",
+  "release_path": "results/tables/caf_isoform_noise_by_depth.csv",
+  "bytes": 569
+ },
+ {
+  "name": "caf_depth_requirement.csv",
+  "release_path": "results/tables/caf_depth_requirement.csv",
+  "bytes": 430
+ },
+ {
+  "name": "caf_power_measured_fixed_referent.csv",
+  "release_path": "results/tables/caf_power_measured_fixed_referent.csv",
+  "bytes": 344
+ },
+ {
+  "name": "fbln1_tcga_events.csv",
+  "release_path": "results/tables/fbln1_tcga_events.csv",
+  "bytes": 1328
+ },
+ {
+  "name": "fbln1_tcga_composition_by_cohort.csv",
+  "release_path": "results/tables/fbln1_tcga_composition_by_cohort.csv",
+  "bytes": 868
+ },
+ {
+  "name": "tcga_caf_events_tvn.csv",
+  "release_path": "results/tables/tcga_caf_events_tvn.csv",
+  "bytes": 22497
+ },
+ {
+  "name": "tcga_caf_events_cox.csv",
+  "release_path": "results/tables/tcga_caf_events_cox.csv",
+  "bytes": 14661
+ },
+ {
+  "name": "tcga_hnsc_oral_power.csv",
+  "release_path": "results/tables/tcga_hnsc_oral_power.csv",
+  "bytes": 374
+ },
+ {
+  "name": "tcga_hnsc_site_breakdown.csv",
+  "release_path": "results/tables/tcga_hnsc_site_breakdown.csv",
+  "bytes": 658
+ },
+ {
+  "name": "tcga_hnsc_psi_event_depth.csv",
+  "release_path": "results/tables/tcga_hnsc_psi_event_depth.csv",
+  "bytes": 1907361
+ },
+ {
+  "name": "pancancer_fbln1_events.csv",
+  "release_path": "results/tables/pancancer_fbln1_events.csv",
+  "bytes": 6637
+ },
+ {
+  "name": "pancancer_caf_fraction.csv",
+  "release_path": "results/tables/pancancer_caf_fraction.csv",
+  "bytes": 2054850
+ },
+ {
+  "name": "arm_sample_ledger.csv",
+  "release_path": "results/tables/arm_sample_ledger.csv",
+  "bytes": 3541
+ },
+ {
+  "name": "tcga_hnsc_site_ledger.csv",
+  "release_path": "results/tables/tcga_hnsc_site_ledger.csv",
+  "bytes": 253
+ },
+ {
+  "name": "icb_power_9v19.csv",
+  "release_path": "results/tables/icb_power_9v19.csv",
+  "bytes": 832
+ },
+ {
+  "name": "sc_dataset_feasibility.csv",
+  "release_path": "results/tables/sc_dataset_feasibility.csv",
+  "bytes": 2500
+ },
+ {
+  "name": "sc_competition_tiers.csv",
+  "release_path": "results/tables/sc_competition_tiers.csv",
+  "bytes": 1048
+ },
+ {
+  "name": "sc_competition_sweep.csv",
+  "release_path": "results/tables/sc_competition_sweep.csv",
+  "bytes": 3550
+ },
+ {
+  "name": "as_archetype_overview.csv",
+  "release_path": "results/tables/as_archetype_overview.csv",
+  "bytes": 2110
+ },
+ {
+  "name": "as_bioinformatics_exemplars.csv",
+  "release_path": "results/tables/as_bioinformatics_exemplars.csv",
+  "bytes": 8986
+ },
+ {
+  "name": "sc_qc.tsv",
+  "release_path": "remote/easyai/sc_qc.tsv",
+  "bytes": 980317
+ },
+ {
+  "name": "sc_marker_dot.tsv",
+  "release_path": "remote/easyai/sc_marker_dot.tsv",
+  "bytes": 60772
+ },
+ {
+  "name": "tx_identifiability.tsv",
+  "release_path": "data/processed/kmer_index/tx_identifiability.tsv",
+  "bytes": 5753143
+ },
+ {
+  "name": "c_arm_scoring_variants.tsv",
+  "release_path": "results/tables/c_arm_scoring_variants.tsv",
+  "bytes": 511
+ },
+ {
+  "name": "c_arm_literature_panels.tsv",
+  "release_path": "results/tables/c_arm_literature_panels.tsv",
+  "bytes": 619
+ },
+ {
+  "name": "c_arm_splicing_factors_response.tsv",
+  "release_path": "results/tables/c_arm_splicing_factors_response.tsv",
+  "bytes": 4836
+ },
+ {
+  "name": "caf_fbln1_isoform.csv",
+  "release_path": "remote/easyai/caf_fbln1_isoform.csv",
+  "bytes": 2018
+ },
+ {
+  "name": "fbln1_isoform_shares.tsv",
+  "release_path": "results/tables/fbln1_isoform_shares.tsv",
+  "bytes": 4001
+ },
+ {
+  "name": "fbln1_tcga.json",
+  "release_path": "data/processed/fbln1_tcga.json",
+  "bytes": 3509
+ },
+ {
+  "name": "fbln1_structure.json",
+  "release_path": "remote/easyai/fbln1_structure.json",
+  "bytes": 9459
+ },
+ {
+  "name": "fbln1_sequences.json",
+  "release_path": "remote/easyai/fbln1_sequences.json",
+  "bytes": 1476
+ },
+ {
+  "name": "fbln1_nmd.json",
+  "release_path": "remote/easyai/fbln1_nmd.json",
+  "bytes": 2584
+ },
+ {
+  "name": "fbln1_physchem.json",
+  "release_path": "remote/easyai/fbln1_physchem.json",
+  "bytes": 35921
+ },
+ {
+  "name": "fbln1_singlecell_validation.json",
+  "release_path": "remote/easyai/fbln1_singlecell_validation.json",
+  "bytes": 2283
+ },
+ {
+  "name": "fig1_arm_b_numbers.json",
+  "release_path": "data/processed/fig1_arm_b_numbers.json",
+  "bytes": 354
+ },
+ {
+  "name": "pancancer_fbln1.json",
+  "release_path": "data/processed/pancancer_fbln1.json",
+  "bytes": 1365
+ },
+ {
+  "name": "isoform_identifiability.json",
+  "release_path": "data/processed/isoform_identifiability.json",
+  "bytes": 745
+ },
+ {
+  "name": "stringent_events.tsv",
+  "release_path": "remote/easyai/stringent_events.tsv",
+  "bytes": 5301
+ },
+ {
+  "name": "nd_donor_events.tsv",
+  "release_path": "remote/easyai/nd_donor_events.tsv",
+  "bytes": 3883056
+ },
+ {
+  "name": "sc_percell.tsv",
+  "release_path": "remote/easyai/sc_percell.tsv",
+  "bytes": 1929051
+ },
+ {
+  "name": "global_tests.json",
+  "release_path": "remote/easyai/global_tests.json",
+  "bytes": 386
+ },
+ {
+  "name": "nd_donor_summary.json",
+  "release_path": "data/processed/server_restore/psi_diff/nd_donor_summary.json",
+  "bytes": 358
+ },
+ {
+  "name": "caf_q0_assignment.csv",
+  "release_path": "remote/easyai/caf_q0_assignment.csv",
+  "bytes": 1124
+ },
+ {
+  "name": "fbln1_C_D_ratio_by_patient.csv",
+  "release_path": "results/tables/fbln1_C_D_ratio_by_patient.csv",
+  "bytes": 553
+ },
+ {
+  "name": "caf_panel_test_deep.csv",
+  "release_path": "results/tables/caf_panel_test_deep.csv",
+  "bytes": 3689
+ },
+ {
+  "name": "sweep_fixed_referent.json",
+  "release_path": "data/processed/sweep_fixed_referent.json",
+  "bytes": 2131
+ },
+ {
+  "name": "dif_fixed_referent.json",
+  "release_path": "data/processed/dif_fixed_referent.json",
+  "bytes": 1158
+ }
+]

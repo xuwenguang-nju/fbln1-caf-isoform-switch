@@ -1,0 +1,40 @@
+{
+ "metric_note": "SpliceSeq reports event PSI only; the 1C/1D choice is an alternative terminal exon (plus strand: 1C ends at chr22:45 563 362, 1D continues into an 829-nt terminal exon at chr22:45 600 307-45 601 135), so AT PSI is a proxy, not the 1C:1D ratio",
+ "events": {
+  "primary": "62665",
+  "secondary": "62666"
+ },
+ "cancers": [
+  "HNSC",
+  "PAAD",
+  "BRCA",
+  "LUAD",
+  "ESCA"
+ ],
+ "source_psi": "data/raw/tcga_spliceseq/full/<cancer>_full.zip (pctwithval=0)",
+ "source_expr": "data/raw/tcga_xena/<cancer>_HiSeqV2.gz",
+ "signature": "data/processed/server_restore/expr/celltype_tpm.tsv (same as task 2)",
+ "meta_rho": {
+  "62665": {
+   "n_cancers": 5,
+   "rho_pooled": -0.3511388309954418,
+   "ci_lo": -0.38535384181338506,
+   "ci_hi": -0.3159596367463716,
+   "p": 1.1403812249981547e-73,
+   "n_same_sign": 0
+  },
+  "62666": {
+   "n_cancers": 5,
+   "rho_pooled": 0.3930113511764304,
+   "ci_lo": 0.3590253810128942,
+   "ci_hi": 0.42595646556414235,
+   "p": 5.85221239051636e-94,
+   "n_same_sign": 5
+  }
+ },
+ "caveats": [
+  "PAAD (4) and ESCA (13) have too few normals for a paired design",
+  "CAF fractions are relative (no immune reference), so cross-cancer comparisons are rank-based only",
+  "SpliceSeq PSI is precomputed by its own pipeline; it is not reproducible from open junction files in this project"
+ ]
+}

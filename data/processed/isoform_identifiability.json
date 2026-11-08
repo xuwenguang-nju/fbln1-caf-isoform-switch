@@ -1,0 +1,24 @@
+{
+ "fasta": "<project-root>",
+ "biotype_filter": null,
+ "k": 31,
+ "unique_kmer_frac_threshold": 0.1,
+ "n_genes_total": 20400,
+ "n_transcripts_total": 110962,
+ "n_multi_isoform_genes": 15900,
+ "n_genes_scored": 15900,
+ "n_transcripts_scored": 106461,
+ "n_identifiable_genes": 8979,
+ "frac_identifiable_genes": 0.5647,
+ "n_distinguishable_transcripts": 31750,
+ "frac_distinguishable_transcripts": 0.2982,
+ "sample": {
+  "n": 4000,
+  "seed": 42,
+  "n_identifiable": 2259,
+  "frac_identifiable": 0.5647,
+  "n_distinguishable": 7856,
+  "frac_distinguishable": 0.3042
+ },
+ "note": "hash-based k-mer sets, mod 2^59-1; expected collisions ~0.06"
+}

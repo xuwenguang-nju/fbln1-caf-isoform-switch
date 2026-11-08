@@ -1,0 +1,32 @@
+{
+ "input": "remote/easyai/hnscc_essential_20261020T1000/results/fractions_full.tsv (12 libraries, rep1, 40,934 genes, per-transcript reads)",
+ "definition": "ref(g)=transcript with most reads in pooled NF libraries; share=reads(ref)/reads(gene) per library; dIF=mean over patients of (CAF-NF)",
+ "defect_corrected": "04_switch.py used each library's own dominant transcript, subtracting different isoforms when the dominant call changes (results/reports/dif_definition_defect.md)",
+ "replay_spearman_vs_filed": 1.0,
+ "replay_max_abs_diff": 2.0643209364124004e-16,
+ "n_genes_old": 12703,
+ "n_genes_new": 16124,
+ "fbln1": {
+  "old_dif": 0.163567766902997,
+  "old_q": 0.1446616930300609,
+  "new_dif": 0.18592925198446456,
+  "new_q": 0.17494519443833592,
+  "new_t": 5.80022408359887,
+  "n_pos": 6,
+  "ref_tx": "ENST00000327858",
+  "share_NF": 0.5542385054507004,
+  "share_CAF": 0.7401677574351649
+ },
+ "q05_old": 0,
+ "q05_new": 1,
+ "abs_015_old": 451,
+ "abs_015_new": 2350,
+ "spearman_vs_old": 0.7642704284358834,
+ "sign_flips_vs_old": 1271,
+ "min_patients": 5,
+ "min_reads": 10,
+ "tiers": {
+  "switch": 0.15,
+  "small": 0.05
+ }
+}

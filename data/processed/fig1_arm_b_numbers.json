@@ -1,0 +1,14 @@
+{
+ "quantified": 16124,
+ "tested_both_depths": 12488,
+ "depth_unstable": 8416,
+ "n_switch": 1,
+ "fbln1_mean_dIF": 0.1859292519844645,
+ "fbln1_sd": 0.0785196897663154,
+ "fbln1_q": 0.0120235212288767,
+ "fbln1_q_all": 0.1749451944383359,
+ "fbln1_n_pos": 6,
+ "fbln1_n": 6,
+ "measured_sd": 0.0785196897663154,
+ "d_for_80pct": 1.4345447820404011
+}

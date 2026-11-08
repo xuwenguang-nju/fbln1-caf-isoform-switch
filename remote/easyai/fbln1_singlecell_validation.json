@@ -1,0 +1,83 @@
+{
+ "note": "1D share = 1D/(1C+1D); UMI scale inverted from TPM via gene lengths",
+ "transcript_lengths": {
+  "ENST00000262722": 2251,
+  "ENST00000327858": 2904
+ },
+ "n_libraries": 7,
+ "caf_gt_epi_tpm": 7,
+ "caf_gt_epi_umi": 7,
+ "agree_both": 7,
+ "per_library": [
+  {
+   "library": "LSCC20_Pre",
+   "share_tpm_CAF": 0.42878081573295196,
+   "share_tpm_epi": 0.3603082124986807,
+   "d_tpm": 0.06847260323427123,
+   "share_umi_CAF": 0.4919725418272728,
+   "share_umi_epi": 0.420843395623692,
+   "d_umi": 0.0711291462035808,
+   "scales_agree": true
+  },
+  {
+   "library": "OCSCC13_Post",
+   "share_tpm_CAF": 0.5538560969661054,
+   "share_tpm_epi": 0.46346374587763134,
+   "d_tpm": 0.09039235108847404,
+   "share_umi_CAF": 0.6156151819937321,
+   "share_umi_epi": 0.5270507023712978,
+   "d_umi": 0.0885644796224343,
+   "scales_agree": true
+  },
+  {
+   "library": "OCSCC1_Post",
+   "share_tpm_CAF": 0.49163484818733094,
+   "share_tpm_epi": 0.4130513230322479,
+   "d_tpm": 0.07858352515508304,
+   "share_umi_CAF": 0.5550881618659418,
+   "share_umi_epi": 0.475856043436827,
+   "d_umi": 0.07923211842911476,
+   "scales_agree": true
+  },
+  {
+   "library": "OCSCC1_Pre",
+   "share_tpm_CAF": 0.4968564166288106,
+   "share_tpm_epi": 0.2649918673275379,
+   "d_tpm": 0.2318645493012727,
+   "share_umi_CAF": 0.5602409598797404,
+   "share_umi_epi": 0.3174603064856561,
+   "d_umi": 0.24278065339408433,
+   "scales_agree": true
+  },
+  {
+   "library": "OCSCC36_Post",
+   "share_tpm_CAF": 0.5313314063814012,
+   "share_tpm_epi": 0.28120908112686527,
+   "d_tpm": 0.2501223252545359,
+   "share_umi_CAF": 0.5939224451168126,
+   "share_umi_epi": 0.33542317693013424,
+   "d_umi": 0.25849926818667834,
+   "scales_agree": true
+  },
+  {
+   "library": "OCSCC36_Pre",
+   "share_tpm_CAF": 0.4002445200965775,
+   "share_tpm_epi": 0.31455594388031605,
+   "d_tpm": 0.08568857621626147,
+   "share_umi_CAF": 0.46263681887934904,
+   "share_umi_epi": 0.37187289936667284,
+   "d_umi": 0.0907639195126762,
+   "scales_agree": true
+  },
+  {
+   "library": "OCSCC3_Post",
+   "share_tpm_CAF": 0.6283338737629122,
+   "share_tpm_epi": 0.5164334320307808,
+   "d_tpm": 0.11190044173213132,
+   "share_umi_CAF": 0.6856349095260719,
+   "share_umi_epi": 0.5794392651148593,
+   "d_umi": 0.10619564441121254,
+   "scales_agree": true
+  }
+ ]
+}

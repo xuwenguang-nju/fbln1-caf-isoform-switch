@@ -1,0 +1,111 @@
+{
+ "definition": "fixed referent (tallest NF transcript), share = frac",
+ "libraries": 36,
+ "genes_tested": 1028,
+ "genes_tested_old": 1033,
+ "sweep_replay_matches_filed": true,
+ "sweep": [
+  {
+   "min_abs_dIF": 0.05,
+   "fdr": 0.1,
+   "n_candidates": 5,
+   "n_without_direction_filter": 5
+  },
+  {
+   "min_abs_dIF": 0.05,
+   "fdr": 0.05,
+   "n_candidates": 3,
+   "n_without_direction_filter": 3
+  },
+  {
+   "min_abs_dIF": 0.05,
+   "fdr": 0.01,
+   "n_candidates": 0,
+   "n_without_direction_filter": 0
+  },
+  {
+   "min_abs_dIF": 0.1,
+   "fdr": 0.1,
+   "n_candidates": 4,
+   "n_without_direction_filter": 4
+  },
+  {
+   "min_abs_dIF": 0.1,
+   "fdr": 0.05,
+   "n_candidates": 3,
+   "n_without_direction_filter": 3
+  },
+  {
+   "min_abs_dIF": 0.1,
+   "fdr": 0.01,
+   "n_candidates": 0,
+   "n_without_direction_filter": 0
+  },
+  {
+   "min_abs_dIF": 0.15,
+   "fdr": 0.1,
+   "n_candidates": 2,
+   "n_without_direction_filter": 2
+  },
+  {
+   "min_abs_dIF": 0.15,
+   "fdr": 0.05,
+   "n_candidates": 2,
+   "n_without_direction_filter": 2
+  },
+  {
+   "min_abs_dIF": 0.15,
+   "fdr": 0.01,
+   "n_candidates": 0,
+   "n_without_direction_filter": 0
+  },
+  {
+   "min_abs_dIF": 0.2,
+   "fdr": 0.1,
+   "n_candidates": 1,
+   "n_without_direction_filter": 1
+  },
+  {
+   "min_abs_dIF": 0.2,
+   "fdr": 0.05,
+   "n_candidates": 1,
+   "n_without_direction_filter": 1
+  },
+  {
+   "min_abs_dIF": 0.2,
+   "fdr": 0.01,
+   "n_candidates": 0,
+   "n_without_direction_filter": 0
+  },
+  {
+   "min_abs_dIF": 0.25,
+   "fdr": 0.1,
+   "n_candidates": 1,
+   "n_without_direction_filter": 1
+  },
+  {
+   "min_abs_dIF": 0.25,
+   "fdr": 0.05,
+   "n_candidates": 1,
+   "n_without_direction_filter": 1
+  },
+  {
+   "min_abs_dIF": 0.25,
+   "fdr": 0.01,
+   "n_candidates": 0,
+   "n_without_direction_filter": 0
+  }
+ ],
+ "n_candidates_015_q05": 2,
+ "n_genes_abs_dIF_ge_015": 14,
+ "n_genes_abs_dIF_ge_015_old": 13,
+ "fbln1": [
+  {
+   "mean_dIF": 0.3092315597361693,
+   "p": 2.2954354706086674e-05,
+   "q": 0.023597076637857102,
+   "n_pos": 6,
+   "n_patients": 6
+  }
+ ]
+}
