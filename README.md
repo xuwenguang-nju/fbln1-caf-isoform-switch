@@ -1,5 +1,9 @@
 # Code and figure provenance — FBLN1 1C→1D isoform switching in CAFs
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24055129.svg)](https://doi.org/10.5281/zenodo.24055129)
+
+Archived as v1.0.0 at DOI [10.5281/zenodo.24055129](https://doi.org/10.5281/zenodo.24055129). Cite that DOI rather than a branch, so the snapshot stays fixed. The concept DOI [10.5281/zenodo.24055128](https://doi.org/10.5281/zenodo.24055128) always resolves to the newest version.
+
 This repository contains the analysis scripts that generate every figure in the
 manuscript, together with the derived tables those scripts read. Raw sequencing data
 are **not** included; they are public and listed in `DATA_SOURCES.md`.
