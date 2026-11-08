@@ -10,6 +10,10 @@ figures/*.png
 figures/*.pdf
 figures/*.svg
 
+# other by-products of running the figure scripts
+.cache/                              # panel crops (69_, 204_)
+data/processed/three_arm_power.json  # summary written by 87_
+
 # OS noise
 .DS_Store
 Thumbs.db

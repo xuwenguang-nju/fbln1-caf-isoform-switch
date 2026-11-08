@@ -192,7 +192,7 @@
  {
   "name": "fbln1_physchem.json",
   "release_path": "remote/easyai/fbln1_physchem.json",
-  "bytes": 35921
+  "bytes": 35858
  },
  {
   "name": "fbln1_singlecell_validation.json",
@@ -212,7 +212,7 @@
  {
   "name": "isoform_identifiability.json",
   "release_path": "data/processed/isoform_identifiability.json",
-  "bytes": 745
+  "bytes": 664
  },
  {
   "name": "stringent_events.tsv",
@@ -263,5 +263,65 @@
   "name": "dif_fixed_referent.json",
   "release_path": "data/processed/dif_fixed_referent.json",
   "bytes": 1158
+ },
+ {
+  "name": "candidates_gated.tsv",
+  "release_path": "results/tables/candidates_gated.tsv",
+  "bytes": 1805829
+ },
+ {
+  "name": "switch_test_full.tsv",
+  "release_path": "results/tables/switch_test_full.tsv",
+  "bytes": 1671429
+ },
+ {
+  "name": "nd_donor_summary.json",
+  "release_path": "remote/easyai/nd_donor_summary.json",
+  "bytes": 358
+ },
+ {
+  "name": "donor_OCSCC1_Post_summary.json",
+  "release_path": "remote/easyai/donor_OCSCC1_Post_summary.json",
+  "bytes": 165
+ },
+ {
+  "name": "donor_OCSCC3_Post_summary.json",
+  "release_path": "remote/easyai/donor_OCSCC3_Post_summary.json",
+  "bytes": 167
+ },
+ {
+  "name": "donor_OCSCC13_Post_summary.json",
+  "release_path": "remote/easyai/donor_OCSCC13_Post_summary.json",
+  "bytes": 167
+ },
+ {
+  "name": "donor_OCSCC36_Post_summary.json",
+  "release_path": "remote/easyai/donor_OCSCC36_Post_summary.json",
+  "bytes": 167
+ },
+ {
+  "name": "mapq_compare.json",
+  "release_path": "remote/easyai/mapq_compare.json",
+  "bytes": 393
+ },
+ {
+  "name": "doublets.json",
+  "release_path": "remote/easyai/doublets.json",
+  "bytes": 629
+ },
+ {
+  "name": "scrublet_effect.json",
+  "release_path": "remote/easyai/scrublet_effect.json",
+  "bytes": 131
+ },
+ {
+  "name": "epi_heterogeneity.json",
+  "release_path": "remote/easyai/epi_heterogeneity.json",
+  "bytes": 501
+ },
+ {
+  "name": "cross_donor_control.json",
+  "release_path": "remote/easyai/cross_donor_control.json",
+  "bytes": 522
  }
 ]

@@ -1,0 +1,28 @@
+{
+ "global_": {
+  "ge20": 31486744,
+  "lt20": 8699317
+ },
+ "sets": {
+  "stringent_CAF": {
+   "ge20": 4505,
+   "lt20": 582,
+   "low_pct": 11.44
+  },
+  "stringent_epithelial": {
+   "ge20": 3948,
+   "lt20": 632,
+   "low_pct": 13.8
+  },
+  "null_CAF": {
+   "ge20": 9802,
+   "lt20": 7221,
+   "low_pct": 42.42
+  },
+  "null_epithelial": {
+   "ge20": 5097,
+   "lt20": 5599,
+   "low_pct": 52.35
+  }
+ }
+}

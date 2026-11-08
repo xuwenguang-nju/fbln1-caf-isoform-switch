@@ -1,0 +1,11 @@
+{
+ "donor": "OCSCC3_Post",
+ "cells": 7085,
+ "lineage": {
+  "epithelial": 481,
+  "CAF": 1734,
+  "unassigned": 2131,
+  "endothelial": 79,
+  "immune": 2660
+ }
+}

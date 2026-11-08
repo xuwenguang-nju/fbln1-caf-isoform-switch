@@ -1,0 +1,8 @@
+{
+ "n_before": 20724,
+ "n_after": 20718,
+ "survived": 27,
+ "total": 27,
+ "max_abs_delta": 0.003143,
+ "median_abs_delta": 0.000137
+}

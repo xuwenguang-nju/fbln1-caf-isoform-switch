@@ -1,0 +1,16 @@
+{
+ "n_donors": 4,
+ "donors": [
+  "OCSCC1_Post",
+  "OCSCC13_Post",
+  "OCSCC3_Post",
+  "OCSCC36_Post"
+ ],
+ "n_events": 20396,
+ "all_same_sign": 5229,
+ "n_q05": 0,
+ "n_q05_and_010": 0,
+ "n_allsame_q05_010": 0,
+ "test": "one-sample t-test on per-donor dPSI, BH across events",
+ "caveat": "donors share cohort and chemistry; independence is assumed, not proven"
+}

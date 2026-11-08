@@ -9,12 +9,17 @@ are **not** included; they are public and listed in `DATA_SOURCES.md`.
 ## Quick start
 
 ```bash
+git clone https://github.com/xuwenguang-nju/fbln1-caf-isoform-switch.git
+cd fbln1-caf-isoform-switch       # the folder containing this README
 pip install -r requirements.txt
-cd figures_release            # the folder containing this README
-python analysis/scripts/63_fig1_depth_gate.py     # reproduces Figure 2
+python analysis/scripts/63_fig1_depth_gate.py       # reproduces Figure 2
+python analysis/scripts/482_smoke_test_release.py   # reproduces all 12, about a minute
 ```
 
-Each figure script writes its PNG into `figures/`.
+Each figure script writes its PNG into `figures/`; no step contacts a remote host. Two
+by-products also appear and are ignored by git: `69_` and `204_` drop panel crops into
+`.cache/figure-style/`, and `87_` writes `data/processed/three_arm_power.json`. Nothing
+reads them back, and no script overwrites any shipped input.
 
 **Path convention.** Every script computes its locations as
 
@@ -82,6 +87,8 @@ pipeline is in `analysis/scripts/remote_step1/`, `c_arm/` and `replication_caf/`
 | `results/tables/caf_panel_test_deep.csv` | server pipeline (panel-deep tests) |
 | `results/tables/fbln1_isoform_shares.tsv` | server pipeline (per-library shares) |
 | `data/processed/isoform_fracs_panel_deep/*.tsv` (36 files) | server pipeline (k-mer quantitation) |
+| `results/tables/candidates_gated.tsv` | server pipeline (depth gate, pre-fixed-referent; panel f) |
+| `results/tables/switch_test_full.tsv` | server pipeline (genome-wide `dIF`, pre-fixed-referent; panel f note) |
 
 ### Figure 4 — single-cell validation
 **Script** `126_fig_s1_singlecell.py`
@@ -139,6 +146,10 @@ pipeline is in `analysis/scripts/remote_step1/`, `c_arm/` and `replication_caf/`
 | `remote/easyai/nd_donor_events.tsv` | server pipeline |
 | `remote/easyai/nd_donor_summary.json` | server pipeline |
 | `remote/easyai/caf_q0_assignment.csv` | server pipeline |
+| `remote/easyai/donor_OCSCC1_Post_summary.json` | server pipeline (lineage composition, panel c) |
+| `remote/easyai/donor_OCSCC3_Post_summary.json` | server pipeline (lineage composition, panel c) |
+| `remote/easyai/donor_OCSCC13_Post_summary.json` | server pipeline (lineage composition, panel c) |
+| `remote/easyai/donor_OCSCC36_Post_summary.json` | server pipeline (lineage composition, panel c) |
 
 ### Figure S1 — cohort and power ledger
 **Script** `138_fig_s2_ledger.py`
@@ -162,6 +173,11 @@ pipeline is in `analysis/scripts/remote_step1/`, `c_arm/` and `replication_caf/`
 | `remote/easyai/global_tests.json` | server pipeline |
 | `remote/easyai/nd_donor_events.tsv` | server pipeline |
 | `remote/easyai/stringent_events.tsv` | server pipeline |
+| `remote/easyai/cross_donor_control.json` | server pipeline (panel b) |
+| `remote/easyai/mapq_compare.json` | server pipeline (panel d) |
+| `remote/easyai/doublets.json` | server pipeline (panel e) |
+| `remote/easyai/scrublet_effect.json` | server pipeline (panel e annotation) |
+| `remote/easyai/epi_heterogeneity.json` | server pipeline (panel f) |
 
 ### Figure S3 — positioning
 **Script** `140_fig_s5_positioning.py`
@@ -193,37 +209,67 @@ rewritten to:
 STYLE = Path(__file__).resolve().parent / "_style_runtime.py"
 ```
 
-This is the **only** change to the released scripts. Nothing else was edited, so line
-numbers and logic match the versions that produced the figures.
+The plotting helpers every script imports from `_figstyle.py` (`panel`,
+`fit_panel_titles`) are vendored next to it for the same reason: the release has to run
+without the original machine's skills directory.
+
+That single line is the **only** change to the released scripts. Diffing every released
+script against the working copy it came from shows one differing line per figure script
+and no difference at all in the 29 upstream scripts, so line numbers and logic match the
+versions that produced the figures.
 
 ---
 
-## Verification status — please read
+## Verification status
 
-The release was tested by running every figure script from the release directory and
-checking that it exits cleanly and writes its PNG:
-
-**9 of 12 reproduce without intervention.** Figures 1, 2, 4, 5, 6, 7, 8, S1 and S3
-run end to end and regenerate their panels from the included tables.
-
-**3 do not, and the reason is known:**
-
-| Figure | Missing input | Nature of the gap |
-|---|---|---|
-| 3 | `results/tables/candidates_gated.tsv` | an intermediate table from the depth-gate chain that was not carried into this release |
-| 9 | `remote/easyai/nd_donor_summary.json` | server-side output of the `psi_diff` pipeline |
-| S2 | `remote/easyai/global_tests.json` reads empty | one of its inputs is present but yields no rows, so an axis limit cannot be computed |
-
-These three are **not** silently broken: the scripts fail with a clear
-`FileNotFoundError` or `ValueError` at the first missing piece. To close them, either
-add the named files, or re-run the server pipeline in `analysis/scripts/remote_step1/`
-against the raw data listed in `DATA_SOURCES.md`.
-
-A helper is included to check the current state at any time:
+**12 of 12 figure scripts reproduce.** Run
 
 ```bash
 python analysis/scripts/482_smoke_test_release.py
 ```
+
+from the release root. It runs each figure script in a subprocess with a fresh output
+path — any stale PNG is deleted first — and passes it only on a clean exit plus a PNG in
+`figures/`, so nothing can pass on a leftover file. A subset can be checked by label,
+for example `... 482_smoke_test_release.py 3 9 S2`.
+
+Verified on Python 3.11.17 with numpy 2.4.6, pandas 3.0.6, matplotlib 3.11.2,
+scipy 1.17.1 and pillow 13.0.0 (Windows). Every regenerated PNG was **byte-identical**
+(SHA-256) to the file the manuscript figure was exported from, so the shipped tables and
+scripts reproduce the published panels exactly, not merely approximately. Exact PNG bytes
+depend on the matplotlib version, so treat the exit status as the portable criterion and
+byte-identity as evidence that the shipped inputs are the published ones.
+
+Two things to keep in mind when reading the code:
+
+- **Figure 3 panel f reads the pre-fixed-referent depth gate**
+  (`results/tables/candidates_gated.tsv`, `results/tables/switch_test_full.tsv`), because
+  that is the layer the published panel was drawn from. The manuscript's quantitative
+  statements use the fixed-referent tables (`*_fixed_referent.*`), which Figures 1, 2 and
+  S1 read. Both layers ship here; `181_gate_under_fixed_referent.py` is the script that
+  bridges them and prints how far the two definitions agree at the gene-call level.
+- **Figures 9 and S2 read small JSON summaries** written by the server-side `psi_diff`
+  pipeline (`remote/easyai/global_tests.json`, `nd_donor_summary.json`,
+  `donor_*_summary.json` and the five control summaries). They ship as-is so those two
+  figures run without a compute host.
+
+### Changes since the first upload (commit `42021da`)
+
+- Added the inputs three figure scripts were missing — 12 files, all listed in
+  `_inputs_manifest.json`: `results/tables/candidates_gated.tsv`,
+  `results/tables/switch_test_full.tsv`, `remote/easyai/nd_donor_summary.json`, the four
+  `remote/easyai/donor_*_summary.json` lineage summaries, and the five control summaries
+  `mapq_compare.json`, `doublets.json`, `scrublet_effect.json`, `epi_heterogeneity.json`,
+  `cross_donor_control.json`. Figures 1, 2, 4–8, S1 and S3 had been reproducing already.
+- Added `analysis/scripts/482_smoke_test_release.py`. The previous README pointed at it,
+  but it was not in the repository.
+- `requirements.txt` now lists `pillow`, which every figure script imports to re-open its
+  own PNG, and names `statsmodels`, `scanpy` and `anndata` as upstream-only extras.
+- `_inputs_manifest.json` byte counts now match the shipped files; two of them had
+  recorded the size of the un-redacted local copy rather than the released one.
+
+No figure script was edited: the single `STYLE = ...` line described above is still the
+only difference from the scripts that produced the figures.
 
 ---
 
@@ -234,10 +280,12 @@ python analysis/scripts/482_smoke_test_release.py
 - **One-off helper scripts** — the working directory they came from contains several
   hundred scripts for figure iteration, patching and verification. Only the 12 figure
   scripts and the 29 scripts that produce their inputs are included.
-- **Intermediate tables with no consumer** — including superseded quantitation
-  (dominant-isoform `dIF`), which is documented in the manuscript as a corrected
-  definition. Including it would invite recomputation of numbers that differ from the
-  published ones.
+- **Intermediate tables with no consumer.** The one superseded layer that *is* here —
+  the pre-fixed-referent gate, `results/tables/candidates_gated.tsv` and
+  `switch_test_full.tsv` — is included only because Figure 3 panel f reads it. The
+  manuscript documents the fixed-referent definition as the corrected one, and every
+  reported number comes from those tables. Nothing else from the several hundred
+  intermediate files in the working directory is included.
 
 ---
 

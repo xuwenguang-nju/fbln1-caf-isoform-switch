@@ -1,0 +1,11 @@
+{
+ "donor": "OCSCC13_Post",
+ "cells": 5275,
+ "lineage": {
+  "epithelial": 712,
+  "CAF": 2483,
+  "unassigned": 1375,
+  "endothelial": 653,
+  "immune": 52
+ }
+}

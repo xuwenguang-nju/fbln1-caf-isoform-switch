@@ -1,0 +1,25 @@
+{
+ "A same contrast  CAF-epi(d1) ~ CAF-epi(d2)": {
+  "n": 21790,
+  "r": 0.3614130381901607
+ },
+ "B diff contrast  CAF-epi(d1) ~ CAF-endo(d2)": {
+  "n": 20567,
+  "r": 0.029998309275807714
+ },
+ "C other pair     CAF-endo(d1)~ CAF-endo(d2)": {
+  "n": 22525,
+  "r": 0.07935613684236457
+ },
+ "D diff celltype  epi-CAF(d1)  ~ epi-endo(d2)": {
+  "n": 20264,
+  "r": 0.19748258978935593
+ },
+ "null": {
+  "mean": 0.0008945447267196226,
+  "p5": -0.010788776419116993,
+  "p95": 0.012255582228523458,
+  "exceed": 0,
+  "emp_p": 0.0
+ }
+}

@@ -1,0 +1,42 @@
+{
+ "OCSCC1_Post": {
+  "cells": 6240,
+  "doublet_like": 176,
+  "pct": 2.82,
+  "hist": {
+   "clean": 5217,
+   "doublet_like": 176,
+   "unassigned": 847
+  }
+ },
+ "OCSCC13_Post": {
+  "cells": 5275,
+  "doublet_like": 132,
+  "pct": 2.5,
+  "hist": {
+   "clean": 3900,
+   "doublet_like": 132,
+   "unassigned": 1243
+  }
+ },
+ "OCSCC3_Post": {
+  "cells": 7085,
+  "doublet_like": 343,
+  "pct": 4.84,
+  "hist": {
+   "clean": 4954,
+   "doublet_like": 343,
+   "unassigned": 1788
+  }
+ },
+ "OCSCC36_Post": {
+  "cells": 3516,
+  "doublet_like": 224,
+  "pct": 6.37,
+  "hist": {
+   "clean": 2916,
+   "doublet_like": 224,
+   "unassigned": 376
+  }
+ }
+}
