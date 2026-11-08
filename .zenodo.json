@@ -1,0 +1,41 @@
+{
+  "title": "Code and derived input tables: FBLN1 isoform usage shifts toward fibulin-1D in head and neck cancer-associated fibroblasts",
+  "upload_type": "software",
+  "license": "mit",
+  "access_right": "open",
+  "version": "v1.0.0",
+  "language": "eng",
+  "creators": [
+    {
+      "name": "Wang, Yufeng",
+      "affiliation": "Department of Oral and Maxillofacial Surgery, Nanjing Stomatological Hospital, Affiliated Hospital of Medical School, Institute of Stomatology, Nanjing University, Jiangsu, China"
+    },
+    {
+      "name": "Yin, Xiteng",
+      "affiliation": "Department of Oral and Maxillofacial Surgery, Nanjing Stomatological Hospital, Affiliated Hospital of Medical School, Institute of Stomatology, Nanjing University, Jiangsu, China"
+    },
+    {
+      "name": "Lu, Yahui",
+      "affiliation": "Department of Oral and Maxillofacial Surgery, Nanjing Stomatological Hospital, Affiliated Hospital of Medical School, Institute of Stomatology, Nanjing University, Jiangsu, China"
+    },
+    {
+      "name": "Xu, Wenguang",
+      "affiliation": "Department of Oral and Maxillofacial Surgery, Nanjing Stomatological Hospital, Affiliated Hospital of Medical School, Institute of Stomatology, Nanjing University, Jiangsu, China"
+    },
+    {
+      "name": "Han, Wei",
+      "affiliation": "Department of Oral and Maxillofacial Surgery, Nanjing Stomatological Hospital, Affiliated Hospital of Medical School, Institute of Stomatology, Nanjing University, Jiangsu, China"
+    }
+  ],
+  "keywords": [
+    "fibulin-1",
+    "FBLN1",
+    "alternative splicing",
+    "isoform switch",
+    "cancer-associated fibroblasts",
+    "head and neck squamous cell carcinoma",
+    "extracellular matrix",
+    "sequencing depth",
+    "RNA-seq"
+  ]
+}
