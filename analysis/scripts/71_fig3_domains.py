@@ -7,14 +7,15 @@ b  amino-acid identity along the alignment: where the two proteins agree
 c  domain retention matrix: which Pfam domains survive in each isoform
 d  alternative-segment composition: length and residue make-up of the divergent
    C-termini
-e  NEW: exon structure and the 50-nt NMD rule -- both isoforms qualify, so the
-   rule does not distinguish them
+e  exon structure and the 50-nt NMD rule -- both stops lie downstream of the last
+   exon-exon junction, so neither isoform is an NMD substrate
+
 f  NEW: physicochemical properties of the two divergent C-termini (GRAVY, pI,
    net charge, sheet propensity) computed from the sequences
 
 Everything is derived from GENCODE v44 sequences + UniProt P23142 + InterPro/Pfam
-(`remote/easyai/fbln1_structure.json`, `fbln1_sequences.json`, `fbln1_nmd.json`,
-`fbln1_physchem.json`).
+(`remote/easyai/fbln1_structure.json`, `fbln1_sequences.json`, `fbln1_physchem.json`,
+plus the corrected NMD classification in `data/processed/fbln1_nmd.json`).
 No structure, stability, NMD, secretion or binding experiment was performed; the
 figure says so on the canvas.
 
@@ -37,8 +38,9 @@ from matplotlib.patches import Rectangle, Patch
 
 ROOT = Path(__file__).resolve().parents[2]
 REM = ROOT / "remote/easyai"
+PROC = ROOT / "data/processed"
 FIG = ROOT / "figures"
-STYLE = Path(__file__).resolve().parent / "_style_runtime.py"
+STYLE = Path(r"\\?\D:\wisp-science\skills\figure-style\runtime.py")
 exec(compile(STYLE.read_text(encoding="utf-8"), "runtime.py", "exec"), globals())
 
 D_COLOR, C_COLOR, ALT_COLOR = "#1f6fb2", "#c47a2c", "#9aa3ad"
@@ -58,7 +60,11 @@ def main() -> None:
     apply_figure_style(sizes=(11, 9.5, 8.5))
     S = json.loads((REM / "fbln1_structure.json").read_text(encoding="utf-8"))
     seq = json.loads((REM / "fbln1_sequences.json").read_text(encoding="utf-8"))
-    nmd = json.loads((REM / "fbln1_nmd.json").read_text(encoding="utf-8"))
+    # NMD is read from the corrected classification in data/processed: the archived
+    # server copy flagged both isoforms as substrates because it compared |stop -
+    # junction| with 50 and so could not tell upstream from downstream. See
+    # 503_fix_nmd_classification.py.
+    nmd = json.loads((PROC / "fbln1_nmd.json").read_text(encoding="utf-8"))
     pc = json.loads((REM / "fbln1_physchem.json").read_text(encoding="utf-8"))
 
     div = S["divergence"]["first_differing_residue_1based"]
@@ -230,17 +236,26 @@ def main() -> None:
                                      edgecolor=col if term else "#8a929b",
                                      lw=0.6, alpha=0.95 if term else 0.8))
         ax_e.plot([0, tx_len], [yv + 0.08] * 2, color="#e3e6e9", lw=0.8, zorder=0)
-        # the last exon-exon junction is the start of the terminal exon in
-        # transcript coordinates; the stop sits inside the terminal exon
+        # The last exon-exon junction is where the terminal exon opens in transcript
+        # coordinates. A stop inside the terminal exon lies DOWNSTREAM of it, which is
+        # the normal configuration and not an EJC-dependent NMD substrate; only a stop
+        # upstream of the junction by >50 nt would qualify under the 50-nt rule.
         junc = bounds[-1][0]
         stop_tx = junc + (int(d["stop_codon_start"]) - bounds[-1][2])
         dist = int(d["stop_to_last_junction_nt"])
+        downstream = bool(d["stop_upstream_of_last_junction"] is False)
+        # tint the stretch between junction and stop to make "inside the terminal
+        # exon" visible rather than merely stated
+        ax_e.add_patch(Rectangle((min(junc, stop_tx), yv), abs(stop_tx - junc), 0.16,
+                                 facecolor="#f2d7ad" if downstream else "#f6c9c4",
+                                 edgecolor="none", alpha=0.65, zorder=0.5))
         ax_e.plot([junc, junc], [yv - 0.05, yv + 0.24], color="#222222", lw=1.1, ls=":")
         ax_e.plot([stop_tx, stop_tx], [yv - 0.05, yv + 0.24], color="#b8342b", lw=1.4)
         ax_e.annotate("", xy=(junc, yv - 0.03), xytext=(stop_tx, yv - 0.03),
                       arrowprops=dict(arrowstyle="<->", color="#b8342b", lw=0.9))
-        ax_e.text((junc + stop_tx) / 2, yv - 0.09, f"{dist} nt", ha="center",
-                  va="top", fontsize=8.2, color="#b8342b")
+        ax_e.text((junc + stop_tx) / 2, yv - 0.09,
+                  f"{dist} nt {'downstream' if downstream else 'upstream'}",
+                  ha="center", va="top", fontsize=8.2, color="#b8342b")
         ax_e.text(-max_tx * 0.02, yv + 0.08, f"{short}  {d['n_exons']} exons",
                   ha="right", va="center", fontsize=9.0, color=col)
     ax_e.set_xlim(-max_tx * 0.26, max_tx * 1.08)
@@ -249,14 +264,16 @@ def main() -> None:
     ax_e.set_xlabel("transcript position (nt)")
     for s in ("left", "right", "top"):
         ax_e.spines[s].set_visible(False)
-    panel(ax_e, "e  both isoforms pass the 50-nt NMD rule", fontsize=12.4)
     dD = nmd["transcripts"]["FBLN1-202_1D"]
     dC = nmd["transcripts"]["FBLN1-201_1C"]
+    n_sub = int(dD["nmd_substrate_50nt_rule"]) + int(dC["nmd_substrate_50nt_rule"])
+    panel(ax_e, f"e  neither isoform is an NMD substrate ({n_sub} of 2)", fontsize=12.4)
     ax_e.text(0.015, 0.995,
               f"dotted = last exon-exon junction; red = stop codon\n"
-              f"both stops are >50 nt from the junction "
-              f"({dD['stop_to_last_junction_nt']} / {dC['stop_to_last_junction_nt']} nt),\n"
-              f"so the rule does NOT separate 1C from 1D\n"
+              f"both stops lie inside the terminal exon, "
+              f"{dD['stop_to_last_junction_nt']} / {dC['stop_to_last_junction_nt']} nt\n"
+              f"downstream of the junction, so neither qualifies under the\n"
+              f"50-nt rule; no NMD difference is inferred\n"
               f"3'UTR in the terminal exon: {dD['utr3_nt_in_terminal_exon']} vs "
               f"{dC['utr3_nt_in_terminal_exon']} nt",
               transform=ax_e.transAxes, ha="left", va="top", fontsize=7.9,
@@ -321,8 +338,10 @@ def main() -> None:
 
     print(f"1D={d_len} 1C={c_len} div={div} EGF9={egf9['start']}-{egf9['end']}")
     print(f"identical prefix={div - 1} aa; differing aligned residues past {div}: {diff}")
-    print(f"NMD: 1D stop {dD['stop_to_last_junction_nt']} nt from junction, "
-          f"1C {dC['stop_to_last_junction_nt']} nt; both >50 -> not discriminating")
+    print(f"NMD: 1D stop {dD['stop_to_last_junction_nt']} nt, "
+          f"1C {dC['stop_to_last_junction_nt']} nt; both DOWNSTREAM of the last "
+          f"junction -> NMD substrates: "
+          f"{dD['nmd_substrate_50nt_rule']} / {dC['nmd_substrate_50nt_rule']}")
     print(f"physchem: 1C pI {pc['segments'][segC_k]['pI']:.2f} vs "
           f"1D {pc['segments'][segD_k]['pI']:.2f}")
     print(f"written figures/fig_fbln1_domains.png {wpx}x{hpx}")

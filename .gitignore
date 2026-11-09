@@ -11,8 +11,10 @@ figures/*.pdf
 figures/*.svg
 
 # other by-products of running the figure scripts
-.cache/                              # panel crops (69_, 204_)
-data/processed/three_arm_power.json  # summary written by 87_
+# .cache/ holds panel crops written by 69_ and 204_
+.cache/
+# summary written by 87_
+data/processed/three_arm_power.json
 
 # OS noise
 .DS_Store

@@ -150,10 +150,18 @@ def main() -> None:
             both = t.index.intersection(n.index)
             dpsi = t.loc[both, "psi"] - n.loc[both, "psi"]
             dcaf = t.loc[both, "CAF"] - n.loc[both, "CAF"]
-            inter = p_int = slope = np.nan
+            # Intercept inference must use the INTERCEPT's standard error and its own
+            # t statistic. `lr.pvalue` / `lr.stderr` belong to the slope, so taking them
+            # for the intercept reports the wrong quantity (this was the error in the
+            # published version of this script). `intercept_stderr` exists from SciPy 1.12.
+            inter, p_int, slope = np.nan, np.nan, np.nan
             if len(both) >= 8:
                 lr = stats.linregress(dcaf.to_numpy(), dpsi.to_numpy())
-                inter, p_int, slope = lr.intercept, lr.pvalue, lr.slope
+                inter, slope = lr.intercept, lr.slope
+                se_int = getattr(lr, "intercept_stderr", np.nan)
+                if np.isfinite(se_int) and se_int > 0:
+                    t_int = inter / se_int
+                    p_int = 2 * stats.t.sf(abs(t_int), len(both) - 2)
             wil = np.nan
             if len(both) >= 6:
                 try:

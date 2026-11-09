@@ -75,12 +75,20 @@ def main() -> None:
         # penultimate and the terminal exon
         term = exons[-1]
         penult = exons[-2] if len(exons) > 1 else None
+        # The 50-nt rule is directional: a stop is only an EJC-dependent substrate
+        # when it lies UPSTREAM of the last junction by more than 50 nt. A stop
+        # downstream of that junction sits in the terminal exon -- the normal
+        # configuration -- and is not a substrate. Comparing |stop - junction| with
+        # 50 loses the sign and therefore misclassifies terminal-exon stops; that
+        # was the error in the published version of this script.
         if strand == "-":
-            # terminal exon is the leftmost; junction is at its 3' end (higher coord)
+            # transcript order runs right-to-left; junction is at the exon's 5' end
             junction = term[1]
+            stop_upstream = stop > junction
             dist = abs(junction - stop)
         else:
             junction = term[0]
+            stop_upstream = stop < junction
             dist = abs(stop - junction)
 
         term_len = term[1] - term[0] + 1
@@ -106,14 +114,16 @@ def main() -> None:
             "stop_codon_start": stop,
             "last_junction": junction,
             "stop_to_last_junction_nt": dist,
+            "stop_upstream_of_last_junction": bool(stop_upstream),
             "utr3_nt_in_terminal_exon": term_len - cds_in_term,
-            "nmd_substrate_50nt_rule": bool(dist > 50),
+            "nmd_substrate_50nt_rule": bool(stop_upstream and dist > 50),
             "exons_transcript_order": exons,
         }
+        verdict = "NMD substrate" if (stop_upstream and dist > 50) else "not an NMD substrate"
+        where = "upstream of" if stop_upstream else "downstream of"
         print(f"{label}: {len(exons)} exons, protein {coding_nt // 3} aa, "
               f"3'UTR in terminal exon {term_len - cds_in_term} nt, "
-              f"stop {dist} nt from the last junction -> "
-              f"{'NMD substrate' if dist > 50 else 'not an NMD substrate'}")
+              f"stop {dist} nt {where} the last junction -> {verdict}")
 
     OUT.parent.mkdir(parents=True, exist_ok=True)
     OUT.write_text(json.dumps(out, indent=1), encoding="utf-8")

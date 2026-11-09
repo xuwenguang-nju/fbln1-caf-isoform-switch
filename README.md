@@ -1,8 +1,8 @@
 # Code and figure provenance — FBLN1 1C→1D isoform switching in CAFs
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24055129.svg)](https://doi.org/10.5281/zenodo.24055129)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24055128.svg)](https://doi.org/10.5281/zenodo.24055128)
 
-Archived as v1.0.0 at DOI [10.5281/zenodo.24055129](https://doi.org/10.5281/zenodo.24055129). Cite that DOI rather than a branch, so the snapshot stays fixed. The concept DOI [10.5281/zenodo.24055128](https://doi.org/10.5281/zenodo.24055128) always resolves to the newest version.
+Archived on Zenodo. The concept DOI [10.5281/zenodo.24055128](https://doi.org/10.5281/zenodo.24055128) always resolves to the newest version; the v1.0.0 snapshot is [10.5281/zenodo.24055129](https://doi.org/10.5281/zenodo.24055129). **This is v1.1.0**, which corrects the two statistical errors described under "Changes in v1.1.0" below. Cite the version DOI of the release you actually used rather than a branch, so the snapshot stays fixed.
 
 This repository contains the analysis scripts that generate every figure in the
 manuscript, together with the derived tables those scripts read. Raw sequencing data
@@ -274,6 +274,35 @@ Two things to keep in mind when reading the code:
 
 No figure script was edited: the single `STYLE = ...` line described above is still the
 only difference from the scripts that produced the figures.
+
+### Changes in v1.1.0 (scientific review corrections)
+
+A review of the analysis found two statistical errors. Both are corrected here, and the
+figures and the manuscript were regenerated from the corrected code. The numbers that
+change are listed so a reader can see exactly what moved.
+
+- **Intercept inference used the slope's uncertainty.** `150b_pancancer_fbln1.py` and its
+  TCGA counterpart (not shipped here) took `linregress(...).pvalue` and `.stderr` for the
+  *intercept* p-value and standard error. Those attributes belong to the **slope**, so every
+  reported composition-adjusted intercept carried the wrong interval and p-value. The bare
+  intercept point estimate was unaffected. `150b_pancancer_fbln1.py` now uses
+  `intercept_stderr` and its own t statistic on `n - 2` df.
+- **The 50-nt NMD rule was applied without direction.** `119_nmd_prediction.py` tested
+  `abs(stop - last_junction) > 50`, which cannot separate an exon-junction-complex substrate
+  (stop *upstream* of the last junction) from the normal configuration (stop *downstream*,
+  inside the terminal exon). Both FBLN1 stops lie downstream by 137 nt (1D) and 352 nt (1C),
+  so **neither isoform is an NMD substrate**; the earlier flag marked both as substrates.
+  The corrected output ships as `data/processed/fbln1_nmd.json`, which Figure 5 panel E
+  reads, so the panel and the JSON now agree.
+
+Figure 5 panel E was redrawn from the corrected classification, and the regenerated PNG is
+byte-identical to the figure in the revised manuscript. `119_nmd_prediction.py` needs the
+GENCODE GTF and runs on the analysis server; the JSON it produced there was corrected and
+is shipped so Figure 5 reproduces without a compute host.
+
+Two things were checked and found already correct, so nothing changed: the depth-gate
+tolerance is 0.04 in both the Methods and the Figure 2 legend, and the terminal-exon 3'UTR
+lengths printed in panel E (692 nt for 1D, 99 nt for 1C) match the exon coordinates.
 
 ---
 
