@@ -2,7 +2,7 @@
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24055128.svg)](https://doi.org/10.5281/zenodo.24055128)
 
-Archived on Zenodo. The concept DOI [10.5281/zenodo.24055128](https://doi.org/10.5281/zenodo.24055128) always resolves to the newest version; the v1.0.0 snapshot is [10.5281/zenodo.24055129](https://doi.org/10.5281/zenodo.24055129). **This is v1.1.0**, which corrects the two statistical errors described under "Changes in v1.1.0" below. Cite the version DOI of the release you actually used rather than a branch, so the snapshot stays fixed.
+Archived on Zenodo. The concept DOI [10.5281/zenodo.24055128](https://doi.org/10.5281/zenodo.24055128) always resolves to the newest version. **This is v1.1.0**, [10.5281/zenodo.24084490](https://doi.org/10.5281/zenodo.24084490), which corrects the two statistical errors described under "Changes in v1.1.0" below; the superseded v1.0.0 snapshot is [10.5281/zenodo.24055129](https://doi.org/10.5281/zenodo.24055129). Cite the version DOI of the release you actually used rather than a branch, so the snapshot stays fixed.
 
 This repository contains the analysis scripts that generate every figure in the
 manuscript, together with the derived tables those scripts read. Raw sequencing data
